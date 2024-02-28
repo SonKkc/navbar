@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\NavbarAnonymousController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +14,8 @@ use App\Http\Controllers\NavbarController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [NavbarAnonymousController::class, 'showNavbar'])->name('home');
+Route::view('/welcome', 'welcome')->name('welcome');
+Route::view('/navbar', 'navbarBase')->name('navbar');
 Route::get('/getMenuData', [NavbarController::class, 'getMenuData']);
 

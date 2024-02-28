@@ -1,9 +1,6 @@
 
 {{-- sidebar --}}
-<div class="w-full h-fit fixed isset-0 top-0 border-b border-gray-300">
     <div id="navbar"></div>
-</div>
-
 
 <script>
     function generateMenu(data) {
@@ -234,26 +231,26 @@
         url: '/getMenuData',
         type: 'GET',
         success: function (data) {
-            console.log(data);
+            // console.log(data);
 
-            data.forEach(function(item) {
-                console.log('Data for ' + item.title + ':');
-                // Kiểm tra xem có thuộc tính 'items' không và hiển thị dữ liệu nếu có
-                if (Array.isArray(item.items) && item.items.length > 0) {
-                    console.log('Data for ' + item.title + ':');
-                    item.items.forEach(function(subItem) {
-                        console.log('SubItem for ' + item.title + ':');
-                        console.log(subItem);
-                        // Kiểm tra xem có thuộc tính 'subItems' không và hiển thị dữ liệu nếu có
-                        if (Array.isArray(subItem.items) && subItem.items.length > 0) {
-                            console.log('Data for subItems:');
-                            subItem.items.forEach(function(subSubItem) {
-                                console.log(subSubItem);
-                            });
-                        }
-                    });
-                }
-            });
+            // data.forEach(function(item) {
+            //     console.log('Data for ' + item.title + ':');
+            //     // Kiểm tra xem có thuộc tính 'items' không và hiển thị dữ liệu nếu có
+            //     if (Array.isArray(item.items) && item.items.length > 0) {
+            //         console.log('Data for ' + item.title + ':');
+            //         item.items.forEach(function(subItem) {
+            //             console.log('SubItem for ' + item.title + ':');
+            //             console.log(subItem);
+            //             // Kiểm tra xem có thuộc tính 'subItems' không và hiển thị dữ liệu nếu có
+            //             if (Array.isArray(subItem.items) && subItem.items.length > 0) {
+            //                 console.log('Data for subItems:');
+            //                 subItem.items.forEach(function(subSubItem) {
+            //                     console.log(subSubItem);
+            //                 });
+            //             }
+            //         });
+            //     }
+            // });
 
             var menu = generateMenu(data);
             $('#navbar').html(menu);
