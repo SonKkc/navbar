@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\NavbarAnonymousController;
+use App\Livewire\NavbarLivewire;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,4 +19,4 @@ Route::get('/', [NavbarAnonymousController::class, 'showNavbar'])->name('home');
 Route::view('/welcome', 'welcome')->name('welcome');
 Route::view('/navbar', 'navbarBase')->name('navbar');
 Route::get('/getMenuData', [NavbarController::class, 'getMenuData']);
-
+Route::get('/livewire', NavbarLivewire::class);

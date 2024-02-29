@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    @livewireStyles
     @yield('head')
 </head>
 
@@ -31,6 +31,6 @@
     <div class="mt-[150px]">
         @yield('content')
     </div>
-
+    @livewireScripts
 </body>
 </html>

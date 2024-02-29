@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <?php echo \Livewire\Mechanisms\FrontendAssets\FrontendAssets::styles(); ?>
+
     <?php echo $__env->yieldContent('head'); ?>
 </head>
 
@@ -31,6 +32,7 @@
     <div class="mt-[150px]">
         <?php echo $__env->yieldContent('content'); ?>
     </div>
+    <?php echo \Livewire\Mechanisms\FrontendAssets\FrontendAssets::scripts(); ?>
 
 </body>
 </html><?php /**PATH /var/www/html/resources/views/layouts/default.blade.php ENDPATH**/ ?>
