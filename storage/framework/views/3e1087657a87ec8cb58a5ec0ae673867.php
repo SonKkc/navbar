@@ -48,8 +48,8 @@
         </div>
         <div class="px-4">
             <ul class="divide-y divide-solid py-2 font-medium">
-                <?php $__currentLoopData = $menuItem['items']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subMenuItem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <?php if(isset($subMenuItem['items'])): ?>
+                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $menuItem['items']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subMenuItem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <!--[if BLOCK]><![endif]--><?php if(isset($subMenuItem['items'])): ?>
                         <li class="divide-y divide-solid py-2 font-medium">
                             <button type="button" @click="<?php echo e(str_replace(' ', '_', $subMenuItem['title'])); ?> = !<?php echo e(str_replace(' ', '_', $subMenuItem['title'])); ?>; <?php echo e(str_replace(' ', '_', $subMenuItem['title'])); ?>right = true"
                             class="flex w-full justify-between rounded-lg p-2 text-left text-gray-700">
@@ -68,8 +68,8 @@
                             <span class=""><?php echo e($subMenuItem['title']); ?></span>
                         </a>
                     </li>
-                    <?php endif; ?>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
             </ul>
         </div>
 

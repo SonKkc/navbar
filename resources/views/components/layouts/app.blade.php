@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    @livewireStyles
-    @yield('head')
-</head>
-<body>
-    <livewire:navbar.index />
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <title>{{ $title ?? 'Page Title' }}</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        @livewireStyles
+        @yield('head')
+    </head>
+    <body>
+        <livewire:navbar.navbar />
 
-    
-        @yield('content')
+        <livewire:pages.home />
 
-    @livewireScripts
-</body>
+
+        @livewireScripts
+    </body>
 </html>

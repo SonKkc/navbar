@@ -1,5 +1,5 @@
 <li class="py-2">
-    <?php if(isset($menuItem['items'])): ?>
+    <!--[if BLOCK]><![endif]--><?php if(isset($menuItem['items'])): ?>
         <button @click="<?php echo e(str_replace(' ', '_', $menuItem['title'])); ?> = !<?php echo e(str_replace(' ', '_', $menuItem['title'])); ?>; <?php echo e(str_replace(' ', '_', $menuItem['title'])); ?>right = true"
             class="flex w-full justify-between rounded-lg p-2 text-gray-700">
             <span class="ms-3"><?php echo e($menuItem['title']); ?></span>
@@ -13,6 +13,6 @@
     <a href="<?php echo e($menuItem['url']); ?>" class="flex w-full justify-between rounded-lg p-2 text-gray-700">
         <span class="ms-3"><?php echo e($menuItem['title']); ?></span>
     </a>
-    <?php endif; ?>
+    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
 </li>
 <?php /**PATH /var/www/html/resources/views/components/sidebar/item.blade.php ENDPATH**/ ?>

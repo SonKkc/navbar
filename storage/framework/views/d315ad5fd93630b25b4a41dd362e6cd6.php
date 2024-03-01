@@ -31,4 +31,5 @@
 </div>
 
 
-<?php /**PATH /var/www/html/resources/views/livewire/components/navbar/index.blade.php ENDPATH**/ ?>
+
+<?php /**PATH /var/www/html/resources/views/livewire/navbar-livewire-controller.blade.php ENDPATH**/ ?>

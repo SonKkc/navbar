@@ -34,6 +34,54 @@ class NavbarAnonymousController extends Controller
                                 "url" => "/subhome4",
                                 "image" => "image url"
                             ],
+                            [
+                                "title" => "SubItem Home 3",
+                                "icon" => "icon sub home 5",
+                                "url" => "/subhome5",
+                                "image" => "image url"
+                            ],
+                            [
+                                "title" => "SubItem Home 4",
+                                "icon" => "icon sub home 6",
+                                "url" => "/subhome6",
+                                "image" => "image url"
+                            ],
+                            [
+                                "title" => "SubItem Home 5",
+                                "icon" => "icon sub home 7",
+                                "url" => "/subhome7",
+                                "image" => "image url"
+                            ],
+                            [
+                                "title" => "SubItem Home 6",
+                                "icon" => "icon sub home 8",
+                                "url" => "/subhome8",
+                                "image" => "image url"
+                            ],
+                            [
+                                "title" => "SubItem Home 7",
+                                "icon" => "icon sub home 9",
+                                "url" => "/subhome9",
+                                "image" => "image url"
+                            ],
+                            [
+                                "title" => "SubItem Home 8",
+                                "icon" => "icon sub home 10",
+                                "url" => "/subhome10",
+                                "image" => "image url"
+                            ],
+                            [
+                                "title" => "SubItem Home 9",
+                                "icon" => "icon sub home 11",
+                                "url" => "/subhome11",
+                                "image" => "image url"
+                            ],
+                            [
+                                "title" => "SubItem Home 10",
+                                "icon" => "icon sub home 12",
+                                "url" => "/subhome12",
+                                "image" => "image url"
+                            ]
 
                         ]
                     ],
@@ -60,6 +108,46 @@ class NavbarAnonymousController extends Controller
                         "icon" => "icon sub home 4",
                         "url" => "/subhome4"
                     ],
+                    [
+                        "title" => "Sub home 5",
+                        "icon" => "icon sub home 5",
+                        "url" => "/subhome5"
+                    ],
+                    [
+                        "title" => "Sub home 6",
+                        "icon" => "icon sub home 6",
+                        "url" => "/subhome6"
+                    ],
+                    [
+                        "title" => "Sub home 7",
+                        "icon" => "icon sub home 7",
+                        "url" => "/subhome7"
+                    ],
+                    [
+                        "title" => "Sub home 8",
+                        "icon" => "icon sub home 8",
+                        "url" => "/subhome8"
+                    ],
+                    [
+                        "title" => "Sub home 9",
+                        "icon" => "icon sub home 9",
+                        "url" => "/subhome9"
+                    ],
+                    [
+                        "title" => "Sub home 10",
+                        "icon" => "icon sub home 10",
+                        "url" => "/subhome10"
+                    ],
+                    [
+                        "title" => "Sub home 11",
+                        "icon" => "icon sub home 11",
+                        "url" => "/subhome11"
+                    ],
+                    [
+                        "title" => "Sub home 12",
+                        "icon" => "icon sub home 12",
+                        "url" => "/subhome12"
+                    ]
 
                 ]
             ],

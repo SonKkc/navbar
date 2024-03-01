@@ -5,7 +5,7 @@
     x-transition:enter="transition ease-out duration-300 delay-200" x-transition:enter-start="transform opacity-0"
     x-transition:enter-end="transform opacity-100" x-transition:leave="transition ease-in duration-300 delay-200 "
     x-transition:leave-start="transform opacity-100" x-transition:leave-end="transform opacity-0"
-    class="absolute inset-0 top-[150px] max-h-[500px] w-full bg-white pb-10 pt-6 shadow-lg overflow-y-auto">
+    class="absolute inset-0 top-[150px] h-[500px] w-full bg-white pb-10 pt-6 shadow-lg overflow-scroll">
     <div class="mx-auto max-w-7xl">
         <div class="flex justify-between gap-4">
             <div class="flex flex-wrap gap-4 w-7/12">
@@ -13,7 +13,7 @@
                 <div class="flex flex-col pe-2">
                     <span class="text-xl text-[#1e5751] mb-4">{{$subMenuItem['title']}}</span>
                     @if(isset($subMenuItem['items']))
-                    <div class="flex flex-col max-h-[300px] overflow-y-auto">
+                    <div class="flex flex-col h-[300px] overflow-scroll">
                         @foreach($subMenuItem['items'] as $subSubMenuItem)
                         <a href="{{$subSubMenuItem['url']}}" class="text-lg text-gray-700 hover:text-[#1e5751] py-3">{{$subSubMenuItem['title']}}</a>
                         @endforeach
