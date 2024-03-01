@@ -3,6 +3,7 @@
         <div 
         @if (isset($menuItem['items'])) 
         x-on:mouseenter="{{ str_replace(' ', '_', $menuItem['title']) }}dropDown = true"
+        @click="{{ str_replace(' ', '_', $menuItem['title']) }}dropDown = !{{ str_replace(' ', '_', $menuItem['title']) }}dropDown"
         @endif
         @if (isset($menuItem['items'])) 
         x-on:mouseleave="{{ str_replace(' ', '_', $menuItem['title']) }}dropDown = false"

@@ -12,6 +12,20 @@
     @yield('head')
 </head>
 
+<style>
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00000073; /* Màu nền cho thanh cuộn */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Màu nền cho phần đường track */
+}
+</style>
+
 <body x-data="{
     @foreach ($menuData as $data)
         {{ str_replace(' ', '_', $data['title']) }}: false,
