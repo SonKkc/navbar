@@ -77,7 +77,7 @@ class NavbarAnonymousController extends Controller
                                 "image" => "image url"
                             ],
                             [
-                                "title" => "SubItem Home 10",
+                                "title" => "SubItem Home 10000",
                                 "icon" => "icon sub home 12",
                                 "url" => "/subhome12",
                                 "image" => "image url"

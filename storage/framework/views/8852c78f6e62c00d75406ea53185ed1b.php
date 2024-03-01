@@ -11,6 +11,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <?php echo $__env->yieldContent('head'); ?>
 </head>
+<style>
+    ::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00000073; /* Màu nền cho thanh cuộn */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Màu nền cho phần đường track */
+}
+</style>
 
 <body x-data="{
     <?php $__currentLoopData = $menuData; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
