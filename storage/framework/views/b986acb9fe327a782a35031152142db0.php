@@ -3,6 +3,7 @@
         <div 
         <?php if(isset($menuItem['items'])): ?> 
         x-on:mouseenter="<?php echo e(str_replace(' ', '_', $menuItem['title'])); ?>dropDown = true"
+        @click="<?php echo e(str_replace(' ', '_', $menuItem['title'])); ?>dropDown = !<?php echo e(str_replace(' ', '_', $menuItem['title'])); ?>dropDown"
         <?php endif; ?>
         <?php if(isset($menuItem['items'])): ?> 
         x-on:mouseleave="<?php echo e(str_replace(' ', '_', $menuItem['title'])); ?>dropDown = false"

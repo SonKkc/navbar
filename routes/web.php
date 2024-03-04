@@ -20,4 +20,4 @@ Route::get('/', [NavbarAnonymousController::class, 'showNavbar'])->name('home');
 Route::view('/welcome', 'welcome')->name('welcome');
 Route::view('/navbar', 'navbarBase')->name('navbar');
 Route::get('/getMenuData', [NavbarController::class, 'getMenuData']);
-Route::get('/livewire', Navbar::class) ->name('navbar.index');
+Route::get('/livewire', Navbar::class)->name('navbar.index');
