@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Livewire\Navbar;
-
+use Livewire\Attributes\Layout;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Navbar extends Component
 {
     public $menuData;
-
+    
     public function mount()
     {
         $this->menuData = [
@@ -104,9 +105,27 @@ class Navbar extends Component
         ];
     }
 
-
     public function render()
     {
         return view('livewire.navbar.navbar');
+        
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        // Chuyển hướng sau khi đăng xuất
+        return redirect()->to('/login');
+    }
+
+    public function register()
+    {
+        return redirect()->to('/register');
+    }
+
+    public function login()
+    {
+        return redirect()->to('/login');
     }
 }

@@ -1,4 +1,4 @@
-<div class="fixed top-0 inset-0 shadow-lg p-2 h-[150px] border-b border-gray-300">
+<div class="fixed top-0 inset-0 shadow-lg p-2 h-[150px] border-b border-gray-300 bg-white">
     <div class="lg:block md:hidden max-sm:hidden max-w-7xl mx-auto">
         <div class="flex items-center justify-between">
             <img src="<?php echo e(asset('images/wonderbly-logo.svg')); ?>" alt="logo" class="h-20 w-20" />

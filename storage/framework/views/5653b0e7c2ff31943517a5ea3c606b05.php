@@ -10,5 +10,33 @@
             </label>
         </div>
     </div>
-    
+    <div x-show="searchdropdown" 
+    x-transition:enter="transition ease-out duration-300 opacity-0"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100" "
+    x-transition:leave="transition ease-in duration-300 opacity-100"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    class="transition-tranform h-[500px] w-full w-full absolute inset-0 top-[76px] bg-white shadow-lg">
+        <div class="max-w-[800px] mx-auto">
+            <div class="flex items-center justify-between pb-2">
+                <span class="text-gray-500 text-xl font-semibold">
+                    Suggestions
+                </span>
+                <button class="text-center" @click="searchdropdown = false">
+                    <svg class="w-7 h-7 text-[#1e5751]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6m0 12L6 6"/>
+                      </svg>
+                </button>
+            </div>
+            <ul class="overflow-y-auto h-[450px]">
+                <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <li class="hover:bg-gray-200 py-2" wire:click="selectProduct('<?php echo e($product->name); ?>')">
+                        <a href="#" class="text-base text-gray-600 hover:text-[#1e5751] hover:bg-gray-200 w-full"><?php echo e($product->name); ?></a>
+                    </li>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+            </ul>
+        </div>
+    </div>
+    <div x-show="searchdropdown" class="fixed left-0 z-[-1] h-full w-full bg-black opacity-50"></div>
 </div><?php /**PATH /var/www/html/resources/views/livewire/particals/search.blade.php ENDPATH**/ ?>

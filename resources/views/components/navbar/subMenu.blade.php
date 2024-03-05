@@ -5,7 +5,7 @@
     x-transition:enter="transition ease-out duration-300 delay-200" x-transition:enter-start="transform opacity-0"
     x-transition:enter-end="transform opacity-100" x-transition:leave="transition ease-in duration-300 delay-200 "
     x-transition:leave-start="transform opacity-100" x-transition:leave-end="transform opacity-0"
-    class="absolute inset-0 top-[150px] max-h-[500px] w-full bg-white pb-10 pt-6 shadow-lg overflow-auto">
+    class="absolute inset-0 h-[500px] w-full bg-white pb-10 pt-6 shadow-lg overflow-auto">
     <div class="mx-auto max-w-7xl">
         <div class="flex justify-between gap-4">
             <div class="flex flex-wrap gap-4 w-7/12">
