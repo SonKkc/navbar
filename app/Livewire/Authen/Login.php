@@ -20,7 +20,7 @@ class Login extends Component
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        
+
         $credentials = [
             'email' => $this->email,
             'password' => $this->password,
@@ -39,5 +39,10 @@ class Login extends Component
     public function render()
     {
         return view('livewire.authen.login');
+    }
+
+    public function register()
+    {
+        return redirect()->to('/register');
     }
 }

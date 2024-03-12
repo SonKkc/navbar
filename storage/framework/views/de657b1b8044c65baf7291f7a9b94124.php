@@ -5,21 +5,21 @@
     x-transition:enter="transition ease-out duration-300 delay-200" x-transition:enter-start="transform opacity-0"
     x-transition:enter-end="transform opacity-100" x-transition:leave="transition ease-in duration-300 delay-200 "
     x-transition:leave-start="transform opacity-100" x-transition:leave-end="transform opacity-0"
-    class="absolute inset-0 h-[500px] w-full bg-white pb-10 pt-6 shadow-lg overflow-auto">
+    class="fixed top-[150px] inset-0 h-[500px] w-full bg-white pb-10 pt-6 shadow-lg overflow-auto">
     <div class="mx-auto max-w-7xl">
         <div class="flex justify-between gap-4">
             <div class="flex flex-wrap gap-4 w-7/12">
                 <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $menuItem['items']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subMenuItem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <!--[if BLOCK]><![endif]--><?php if(isset($subMenuItem['items'])): ?>
                 <div class="flex flex-col pe-2 px-2">
                     <span class="text-xl text-[#1e5751] mb-4"><?php echo e($subMenuItem['title']); ?></span>
-                    <!--[if BLOCK]><![endif]--><?php if(isset($subMenuItem['items'])): ?>
                     <div class="flex flex-col max-h-[300px] overflow-auto px-2">
                         <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $subMenuItem['items']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subSubMenuItem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <a href="<?php echo e($subSubMenuItem['url']); ?>" class="text-lg text-gray-700 hover:text-[#1e5751] py-3"><?php echo e($subSubMenuItem['title']); ?></a>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
                     </div>
-                    <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
                 </div>
+                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
             </div>
             <div class="w-3/12 flex flex-col">

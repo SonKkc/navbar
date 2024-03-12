@@ -1,7 +1,7 @@
 <div class="min-h-screen w-full bg-[#FBF4E8] flex flex-col justify-center">
 
     <div class="mx-auto w-full max-w-lg max-sm:p-4">
-        <div class="flex flex-col items-center bg-white p-8 shadow-xl">
+        <div class="flex flex-col items-center bg-white p-8 shadow-xl" wire:loading.class="opacity-50">
             <h1 class="text-3xl font-semibold text-gray-700">Login</h1>
 
             <form wire:submit.prevent="login" class="flex w-full flex-col gap-4">
@@ -23,14 +23,28 @@
                     </div>
                 <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
 
-                <button type="submit"
-                    class="w-full border border-black bg-black p-4 text-white hover:bg-white hover:text-black cursor-pointer">Login</button>
+                <button type="submit" wire:loading.remove
+                
+                    class="w-full border border-black bg-black p-4 text-white hover:bg-white hover:text-black cursor-pointer"
+                    >Login
+                </button>
+               
+                <button  wire:loading class="w-full border border-black bg-black p-4 text-white cursor-pointer opacity-50"
+                    >Loging in...
+                </button>
             </form>
 
             <span class="mb-4 mt-7 w-full text-center text-2xl font-semibold text-gray-700">Don't have an
                 account?</span>
-            <a href="/register" class="w-full cursor-pointer text-center text-[#235A54] underline underline-offset-8"
+            <a href="/register"
+             class="w-full cursor-pointer text-center text-[#235A54] underline underline-offset-8"
                 wire:navigate>Create an account</a>
+
+                <button wire:click="register" 
+                wire:confirm.prompt="Are you sure?\n\nType DELETE to confirm|DELETE"
+                class="w-full cursor-pointer text-center text-[#235A54] underline underline-offset-8">
+                    go to register
+                </button>
         </div>
 
     </div>

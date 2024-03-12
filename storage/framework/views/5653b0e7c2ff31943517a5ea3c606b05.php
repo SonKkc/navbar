@@ -19,6 +19,7 @@
     x-transition:leave-end="opacity-0"
     class="transition-tranform h-[500px] w-full w-full absolute inset-0 top-[76px] bg-white shadow-lg">
         <div class="max-w-[800px] mx-auto">
+           
             <div class="flex items-center justify-between pb-2">
                 <span class="text-gray-500 text-xl font-semibold">
                     Suggestions
@@ -35,6 +36,7 @@
                         <a href="#" class="text-base text-gray-600 hover:text-[#1e5751] hover:bg-gray-200 w-full"><?php echo e($product->name); ?></a>
                     </li>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                
             </ul>
         </div>
     </div>

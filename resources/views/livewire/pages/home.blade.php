@@ -1,12 +1,26 @@
 <div class="w-full bg-[#FDF8F1]">
-    {{-- hero-banner --}}
-    <div class="mx-12 bg-white ">
-        <div class="mx-auto max-w-7xl relative">
+    <style>
+        /* Định nghĩa lớp zigzag-before */
+    .zigzag-after::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        height: 1px; /* Chiều cao của mỗi dải zig-zag */
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none"><path d="M0 0L10 10L20 0" fill="#fuchsia"/></svg>'); /* Thay đổi kích thước và hình dạng của zig-zag bằng SVG */
+        transform: scaleY(-1);    
+    }
+
+    </style>
+    <div class="mx-12 bg-white">
+        {{-- hero-banner --}}
+        <div class="mx-auto max-w-7xl relative ">
             <!-- Swiper -->
             <div class="swiper mySwiper ">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide flex items-center  max-h-[445px] overflow-hidden">
-                        <div class="flex h-[450px] w-4/12 flex-col justify-center gap-4 bg-pink-400/75 px-12 py-10 overflow-hidden">
+                        <div class="flex h-[450px] w-4/12 flex-col justify-center gap-4 bg-pink-400/75 px-12 py-10 overflow-hidden ">
                             <h2 class="text-3xl text-black">Peronalized books for birthdays</h2>
                             <span class="text-sm text-black">
                                 Gift to make thier day, whether they're your parter, parent or BFF
@@ -15,10 +29,12 @@
                                 class="w-8/12 border border-black bg-black p-4 text-lg text-pink-400/75 hover:bg-transparent hover:text-black">
                                 Shop birthday gift
                             </button>
+                            
                         </div>
-                        <div class="w-8/12">
+                        <div class="w-8/12 relative">
                             <img src="{{ asset('images/baby-read-book.avif') }}" alt=""
                                 class="h-full w-full object-cover">
+                                <div class="absolute w-20 inset-y-0 bg-pink-400/75 zigzag-after"></div>
                         </div>
                     </div>
                     <div class="swiper-slide flex items-center max-h-[445px] overflow-hidden">
@@ -40,12 +56,12 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-btn-next text-center rounded-full bg-black text-white text-sm p-2 absolute top-1/2 -right-6 z-20">
+            <div class="swiper-btn-next text-center rounded-full bg-black text-white text-sm p-2 absolute top-2/4 -right-6 z-20">
                 <svg class="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 16 4-4-4-4"/>
                   </svg>
             </div>
-            <div class="swiper-btn-prev text-center rounded-full bg-black text-white text-sm p-2 absolute top-1/2 -left-6 z-20">
+            <div class="swiper-btn-prev text-center rounded-full bg-black text-white text-sm p-2 absolute top-2/4 -left-6 z-20">
                   <svg class="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14 8-4 4 4 4"/>
                   </svg>
@@ -65,55 +81,69 @@
             </script>
 
         </div>
-    </div>
+        {{-- end-banner-hero --}}
 
-    <div class="">
-
-        <h1>Navbar Livewire</h1>
-
-        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam magni quo natus!
-            Deserunt totam aut perferendis animi iusto nostrum atque nesciunt consectetur? Enim sunt sint repellat
-            quibusdam est qui.
-            Illo magni accusantium voluptatem dignissimos neque eveniet ipsum quaerat, nobis praesentium enim vero
-            doloremque necessitatibus ut pariatur similique unde consequuntur officia optio cupiditate earum provident
-            quas odio! Illo, quisquam facilis.
-            Illo iste doloremque, voluptatibus quis ipsum similique nostrum exercitationem nulla maiores, at sapiente
-            dicta quae sed inventore earum harum dolor sint recusandae eos, aspernatur blanditiis hic veritatis? Nulla,
-            asperiores quibusdam.</p>
-        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est magni temporibus harum
-            eius,
-            fugit corrupti, saepe amet, aspernatur laborum sint architecto ratione. Veniam expedita a, pariatur amet
-            optio impedit.
-            Numquam ea quidem, doloremque dolorum repudiandae hic provident neque quos, officia iste adipisci ad
-            nesciunt nostrum saepe facilis amet ullam tenetur, cupiditate illum natus quasi molestias possimus! Maxime,
-            doloribus et!
-            Culpa sequi, maxime incidunt nulla ipsa et minus, error ab, quis temporibus autem quasi nam omnis
-            repellendus nisi dolorum velit voluptates ipsum eligendi accusantium eveniet. Cum ullam mollitia eligendi
-            nam.
-            Tenetur odit ab quibusdam omnis explicabo minima quo asperiores et earum perferendis dolore enim vel,
-            possimus maxime excepturi aut sint nulla soluta deserunt. Voluptatum sint nostrum corporis enim? Minus,
-            deserunt.</p>
-
-        <div class="">
-            <a href="/" wire:navigate>Home</a>
-        </div>
-
-        <style>
-            .zigzag-border {
-              position: relative;
-              background: url('data:image/svg+xml,%3Csvg width="28" height="74" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M28 0v74h-2c0-.618-.191-.854-.455-1.18-.163-.202-.354-.438-.545-.82L1 39.5c-.55-.75-1-1.649-1-2.5 0-.901.45-1.802 1-2.503L25 2c.5-.5 1-1 1-2h2Z" fill="%2323231E"%3E%3C/path%3E%3C/svg%3E') repeat-x;
-              background-size: 28px 74px; /* Điều chỉnh kích thước của mũi nhọn và khoảng cách giữa chúng */
-            }
-          </style>
-
-        <div class="flex items-center">
-            <div class="zigzag-border flex-shrink-0 w-32">
-              <!-- Nội dung của thẻ div đầu tiên bên trái -->
-              <div class="p-4 bg-blue-500 text-white w-80 h-80">Div 1</div>
+        {{-- best-seller --}}
+        <div class="border-t border-gray-200 mt-12 pb-12">
+            <div class="mx-auto max-w-7xl pt-12">
+                <h2 class="text-3xl font-semibold text-gray-700">Our bestsellers</h2>
+                <span class="text-gray-700 text-sm">Personalized stories loved by millions</span>
+                <div class="grid grid-cols-4 gap-4 pt-6">
+                    {{-- @foreach ($products as $product)
+                    <div class="flex flex-col gap-4 justify-between">
+                        <div class="flex flex-col gap-4">
+                            <img src="{{ asset('images/bestseller-pic-1.avif') }}" alt="" class="w-full object-cover bg-[#FDF8F1]">
+                            <div class="text-gray-700 text-lg font-semibold">{{$product->name}}</div>
+                            <span class="text-gray-700 text-sm break-all">{{$product->description}}</span>
+                        </div>
+                        <button class="mt-8 border border-black bg-black p-3 text-lg text-white hover:bg-transparent hover:text-black w-7/12">
+                            Personalize
+                        </button>
+                    </div>
+                    @endforeach --}}
+                    
+                    <div class="flex flex-col gap-4 justify-between">
+                        <div class="flex flex-col gap-4">
+                            <img src="{{ asset('images/bestseller-pic-1.avif') }}" alt="" class="h-72 w-72 object-cover bg-[#FDF8F1]">
+                            <div class="text-gray-700 text-lg font-semibold">When You Were Born</div>
+                            <span class="text-gray-700 text-sm">A story to celebrate a new baby</span>
+                        </div>
+                        <button class="mt-8 border border-black bg-black p-3 text-lg text-white hover:bg-transparent hover:text-black w-7/12">
+                            Personalize
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-4 justify-between">
+                        <img src="{{ asset('images/bestseller-pic-2.avif') }}" alt="" class="h-72 w-72 object-cover bg-[#FDF8F1]">
+                        <div class="text-gray-700 text-lg font-semibold">Me and My Big Brother / My Big Sister</div>
+                        <span class="text-gray-700 text-sm">A story about growing up together</span>
+                        <button class="mt-8 border border-black bg-black p-3 text-lg text-white hover:bg-transparent hover:text-black w-7/12">
+                            Personalize
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-4 justify-between">
+                        <div class="flex flex-col gap-4">
+                            <img src="{{ asset('images/bestseller-pic-3.avif') }}" alt="" class="h-72 w-72 object-cover bg-[#FDF8F1]">
+                            <div class="text-gray-700 text-lg font-semibold">I'm a Name-O-Saurus</div>
+                            <span class="text-gray-700 text-sm">A stomping, romping dinosaur adventure</span>
+                        </div>
+                        <button class="mt-8 border border-black bg-black p-3 text-lg text-white hover:bg-transparent hover:text-black w-7/12">
+                            Personalize
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-4 justify-between">
+                        <div class="flex flex-col gap-4">
+                            <img src="{{ asset('images/bestseller-pic-4.avif') }}" alt="" class="h-72 w-72 object-cover bg-[#FDF8F1]">
+                            <div class="text-gray-700 text-lg font-semibold">First Mother’s Day for Mommy and Me</div>
+                            <span class="text-gray-700 text-sm">Capture that first precious Mother's Day</span>
+                        </div>
+                        <button class="mt-8 border border-black bg-black p-3 text-lg text-white hover:bg-transparent hover:text-black w-7/12">
+                            Personalize
+                        </button>
+                    </div>
+                </div>
             </div>
-            <!-- Nội dung của thẻ div thứ hai bên phải -->
-            <div class="p-4 bg-green-500 text-white w-80 h-80">Div 2</div>
-          </div>
-
+        </div>
+        {{-- --}}
+    </div>
 
 </div>
