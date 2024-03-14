@@ -12,7 +12,7 @@
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     mainMenu: false, drawer: false, outsideClick: false}" class="z-40 relative">
     <div class="fixed top-0 inset-0 shadow-lg p-2 h-[150px] border-b border-gray-300 bg-white">
-        <div class="lg:block md:hidden max-sm:hidden max-w-7xl mx-auto">
+        <div class="min-[1040px]:block sm:hidden max-w-7xl mx-auto">
             <div class="flex items-center justify-between">
                 <a class="block cursor-pointer" href="/home" wire:navigate>
                     <img src="<?php echo e(asset('images/wonderbly-logo.svg')); ?>" alt="logo" class="h-20 w-20" />      
@@ -38,12 +38,13 @@ if (isset($__slots)) unset($__slots);
                         
                         <button class="hover:bg-gray-300 rounded-full">
                             
-                            <button wire:click="logout">Đăng Xuất</button>
+                            <button wire:click="logout">Logout</button>
                         </button>
                     <?php else: ?>
                         
-                            <a href="/login" wire:navigate>Đăng Nhập</a>
-                            <a href="/register" wire:navigate>Đăng Ký</a>
+                            <a href="/login" wire:navigate>Login</a>
+                            /
+                            <a href="/register" wire:navigate>Register</a>
                     <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
                     <button class="hover:bg-gray-300 rounded-full">
                         <svg class="w-10 h-10 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -78,7 +79,7 @@ if (isset($__slots)) unset($__slots);
             </div>
         </div>
 
-        <div class="lg:hidden md:block" >
+        <div class="min-[1040px]:hidden sm:block" >
             <div class="grid grid-cols-3 gap-3">
                 <div class="flex items-center justify-start z-40">
                     <?php if (isset($component)) { $__componentOriginal2880b66d47486b4bfeaf519598a469d6 = $component; } ?>

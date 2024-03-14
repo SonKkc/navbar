@@ -3,10 +3,9 @@
         <div 
         @if (isset($menuItem['items'])) 
         x-on:mouseenter="{{ str_replace(' ', '_', $menuItem['title']) }}dropDown = true"
-        @click="{{ str_replace(' ', '_', $menuItem['title']) }}dropDown = !{{ str_replace(' ', '_', $menuItem['title']) }}dropDown"
-        @endif
-        @if (isset($menuItem['items'])) 
         x-on:mouseleave="{{ str_replace(' ', '_', $menuItem['title']) }}dropDown = false"
+        @click="{{ str_replace(' ', '_', $menuItem['title']) }}dropDown = !{{ str_replace(' ', '_', $menuItem['title']) }}dropDown"
+        @click.outside="{{ str_replace(' ', '_', $menuItem['title']) }}dropDown = false"
         @endif
             class="flex items-center border-b-4 border-white text-gray-700 hover:border-[#1e5751] hover:text-[#1e5751]">
             @if (isset($menuItem['items']))

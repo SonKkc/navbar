@@ -12,7 +12,7 @@
     @endforeach
     mainMenu: false, drawer: false, outsideClick: false}" class="z-40 relative">
     <div class="fixed top-0 inset-0 shadow-lg p-2 h-[150px] border-b border-gray-300 bg-white">
-        <div class="lg:block md:hidden max-sm:hidden max-w-7xl mx-auto">
+        <div class="min-[1040px]:block sm:hidden max-w-7xl mx-auto">
             <div class="flex items-center justify-between">
                 <a class="block cursor-pointer" href="/home" wire:navigate>
                     <img src="{{ asset('images/wonderbly-logo.svg') }}" alt="logo" class="h-20 w-20" />      
@@ -25,12 +25,13 @@
                             {{-- <svg class="w-10 h-10 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-width="1" d="M7 17v1c0 .6.4 1 1 1h8c.6 0 1-.4 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                             </svg> --}}
-                            <button wire:click="logout">Đăng Xuất</button>
+                            <button wire:click="logout">Logout</button>
                         </button>
                     @else
                         {{-- Nếu chưa đăng nhập --}}
-                            <a href="/login" wire:navigate>Đăng Nhập</a>
-                            <a href="/register" wire:navigate>Đăng Ký</a>
+                            <a href="/login" wire:navigate>Login</a>
+                            /
+                            <a href="/register" wire:navigate>Register</a>
                     @endif
                     <button class="hover:bg-gray-300 rounded-full">
                         <svg class="w-10 h-10 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -46,7 +47,7 @@
             </div>
         </div>
 
-        <div class="lg:hidden md:block" >
+        <div class="min-[1040px]:hidden sm:block" >
             <div class="grid grid-cols-3 gap-3">
                 <div class="flex items-center justify-start z-40">
                     <x-sidebar :menuData="$menuData" />
